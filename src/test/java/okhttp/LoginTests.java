@@ -21,7 +21,7 @@ public class LoginTests {
     public void loginPositive() throws IOException {
 
         AuthRequestDTO requestDTO = AuthRequestDTO.builder()
-                .username("vasya_pupkin@gmail.com")
+                .username("vasya_pupkingmail.com")
                 .password("Vp12345$")
                 .build();
 
@@ -44,7 +44,7 @@ public class LoginTests {
         }else{
             System.out.println("Response code is: " + response.code());
             ErrorDTO errorDTO = gson.fromJson(response.body().string(), ErrorDTO.class);
-            System.out.println(errorDTO.getStatus() + " " + errorDTO.getMessage() + " " + errorDTO.getError());
+            System.out.println(errorDTO.getStatus() + " " + errorDTO.getError()+" "+errorDTO.getMessage());
             Assert.assertFalse(response.isSuccessful());
         }
     }
