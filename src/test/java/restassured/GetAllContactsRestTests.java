@@ -30,6 +30,7 @@ public class GetAllContactsRestTests implements Helper {
         for(ContactDTO contactDTO : contactListDTO.getContacts()) {
             System.out.println(contactDTO.getId());
             System.out.println(contactDTO.getName());
+            System.out.println(contactDTO.getLastName());
             System.out.println(contactDTO.getEmail());
             System.out.println("================================================================");
         }
